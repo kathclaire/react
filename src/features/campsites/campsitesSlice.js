@@ -3,7 +3,7 @@
 
 import {CAMPSITES} from '../../app/shared/CAMPSITES'
 
-export const selectAllCampsite = () => {
+export const selectAllCampsites = () => {
     return CAMPSITES;
 };
 
