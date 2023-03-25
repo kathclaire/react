@@ -1,11 +1,13 @@
-import {Routes, Route} from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import ContactPage from './pages/ContactPage';
 import HomePage from './pages/HomePage';
 import logo from './logo.svg';
 import CampsitesDirectoryPage from './pages/CampsitesDirectoryPage';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import CampsiteDetailPage from './pages/CampsiteDetailPage';
 import './App.css';
+import AboutPage from './pages/AboutPage';
 
 function App() {
   return (
@@ -13,8 +15,13 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='contact' element={<ContactPage />}/>
-        <Route path='directory' element={<CampsitesDirectoryPage />}/>
+        <Route path='contact' element={<ContactPage />} />
+        <Route path='directory' element={<CampsitesDirectoryPage />} />
+        <Route
+          path='directory/:campsiteId'
+          element={<CampsiteDetailPage />}
+        />
+        <Route path='about' element={<AboutPage />} />
       </Routes>
       <Footer />
     </div>
