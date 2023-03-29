@@ -8,7 +8,9 @@ const PartnersList = () => {
         <Col className="mt-4">
             {partners.map((partner) => {
                 return (
-                    <div className="mb-5" key={partner.id}><Partner partner={partner}/></div>
+                    <div className="d-flex mb-5" key={partner.id}>
+                        <Partner partner={partner}/>
+                    </div>
                 )
             })}
         </Col>
